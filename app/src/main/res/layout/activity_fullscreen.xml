@@ -1,0 +1,124 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.kylin.kwahoo.FullscreenActivity">
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/myEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dip"
+            android:hint="搜索或输入网址"
+            android:imeOptions="actionSearch"
+            android:scrollHorizontally="true"
+            android:singleLine="true">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dip"
+            android:layout_toRightOf="@+id/myEditText"
+            android:background="@drawable/windsearch"
+            android:onClick="click" />
+
+        <ProgressBar
+            android:id="@+id/webProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/myEditText"
+            android:progressDrawable="@drawable/my_progressbar"
+            android:visibility="gone" />
+
+        <WebView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/webProgress"
+            android:layout_marginBottom="50dp"
+            android:layerType="hardware" />
+
+
+    </RelativeLayout>
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#0099cc"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="*">
+
+                <TableRow android:layout_margin="0.5dip">
+
+                    <Button
+                        android:id="@+id/goback"
+                        android:layout_width="10dip"
+                        android:background="#00000000"
+                        android:text="后退" />
+
+                    <Button
+                        android:id="@+id/goforward"
+                        android:layout_width="10dip"
+                        android:background="#00000000"
+                        android:text="前进" />
+
+                    <Button
+                        android:id="@+id/setMenu"
+                        android:layout_width="10dip"
+                        android:background="#00000000"
+                        android:text="设置" />
+
+                    <Button
+                        android:id="@+id/webFresh"
+                        android:layout_width="10dip"
+                        android:background="#00000000"
+                        android:text="刷新" />
+
+                    <Button
+                        android:id="@+id/backToMain"
+                        android:layout_width="10dip"
+                        android:background="#00000000"
+                        android:text="更多" />
+                    <!-- android:onClick="goToMain" -->
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

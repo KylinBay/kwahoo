@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <item  
+        android:id="@+id/action_main"  
+        android:orderInCategory="100"  
+        android:title="主界面"  
+        app:showAsAction="never"/>  
+    <item  
+        android:id="@+id/action_search"  
+        android:orderInCategory="100"  
+        android:title="页内搜索"  
+        app:showAsAction="never"/>  
+    <item  
+        android:id="@+id/action_del"  
+        android:orderInCategory="100"  
+        android:title="清除上网记录"  
+        app:showAsAction="never"/>    
+
+</menu>

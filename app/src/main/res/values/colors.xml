@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <!--用于全站分割线颜色-->
+    <color name="color_line">#E4E4E4</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>
