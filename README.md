@@ -1,3 +1,2 @@
-Android Browser
-kwahoo
-kwahoo
+# Kwahoo Browser
+Kwahoo 浏览器是我大学期间做的一个基于Android原生WebView实现的项目，本项目实现了全屏播放，自动匹配网址等简易功能
